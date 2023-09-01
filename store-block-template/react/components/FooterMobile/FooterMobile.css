@@ -1,0 +1,50 @@
+.addIcon {
+    margin-left: 17rem;
+}
+.menuItem {
+    text-decoration: none;
+    color:#000;
+}
+input.inputBox::placeholder{
+    color: black;
+}
+.inputBox {
+    border: 1px solid;
+    border-radius: 14px;
+}
+.arrow {
+    position: relative;
+    right:2rem;
+    top:0.25rem;
+}
+.iconItem {
+    color: #000;
+}
+.socialIcons {
+    position: relative;
+    top: 3rem;
+    right: 20rem;
+}
+.listWrapper {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .listItem {
+    float: left;
+  }
+  
+  .listItem a {
+    display: block;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .listWrap{
+    list-style-type: none;
+    margin-left: -2rem;
+  }

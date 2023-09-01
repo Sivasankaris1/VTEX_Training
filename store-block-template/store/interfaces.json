@@ -1,0 +1,14 @@
+{
+  "countdown": {
+    "component": "Countdown"
+  },
+  "custom-message": {
+    "component": "Message"
+  },
+  "custom-footer-desktop": {
+    "component": "FooterDesktop"
+  },
+  "custom-footer-mobile": {
+    "component": "FooterMobile"
+  }
+}

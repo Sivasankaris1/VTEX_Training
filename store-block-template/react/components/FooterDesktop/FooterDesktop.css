@@ -1,0 +1,54 @@
+.menuItemd {
+    text-decoration: none;
+    color:#000;
+}
+.socialIconsd {
+    float: right;
+    position: relative;
+    right: 4rem;
+    bottom: 1rem;
+}
+.iconItemd {
+    color: #000;
+}
+.lastRowd {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    right: 3rem;
+}
+.inputBoxd {
+    border: 1px solid;
+    border-radius: 14px;
+}
+input.inputBoxd::placeholder{
+    color: black;
+}
+.arrowd {
+    position: relative;
+    right:2rem;
+    top:0.25rem;
+}
+.socialDivd {
+   justify-content:flex-end ;
+}
+.listWrapperd {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    top: 2rem;
+    left: 4rem;
+}
+  
+.listItemd {
+    float: left;
+}
+  
+.listItemd a {
+    display: block;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+}
