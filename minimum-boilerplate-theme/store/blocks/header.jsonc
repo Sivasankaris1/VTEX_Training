@@ -7,7 +7,8 @@
   },
   "header-layout.desktop": {
     "children": [
-      "sticky-layout#desktop"
+      "sticky-layout#desktop",
+      "custom-mega-menu-desktop"
     ]
   },
   "sticky-layout#desktop": {
@@ -53,7 +54,10 @@
     }
   },
   "header-layout.mobile": {
-    "children": ["sticky-layout#mobile"]
+    "children": [
+      "sticky-layout#mobile",
+      "custom-mega-menu-mobile"
+  ]
   },
   "sticky-layout#mobile": {
     "children": ["flex-layout.row#mobile"]

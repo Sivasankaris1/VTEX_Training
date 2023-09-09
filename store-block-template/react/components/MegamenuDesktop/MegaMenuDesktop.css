@@ -1,0 +1,119 @@
+.topMenuListWrapperDesk {
+  overflow: hidden;
+}
+  
+.topMenuItemDesk {
+  text-align: center;
+  text-decoration: none;
+}
+.menuItemWrapperDesk {
+  float: left;
+}
+
+.menuItemWrapperDesk:hover {
+  text-align: center;
+  text-decoration: none;
+  background-color: #F4F4F4;
+  color:#E7040F;
+}
+
+.topMenuItemDesk:hover{
+  color:#E7040F;
+}
+
+.menuItemWrapperDesk:hover .submenuWrapperDesk {
+  display: block;
+}
+
+.submenuContainer {
+  width: 98.75%;
+  height: 45%;
+  z-index: 1000;
+  margin-top: 10px;
+  position: fixed;
+  left: 0.75rem;
+  background-color: #F4F4F4;
+  }
+  
+.subMenuItemDesk {
+  color:#000;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.submenuWrapperDesk {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  padding-top: 10px;
+  border-bottom: 1px solid #E7040F;
+}
+
+.subMenuItemDesk a {
+  padding-right: 10px;
+}
+
+.vtex-countdown-0-x-submenuWrapperDesk:last-child {
+  border-bottom: none;
+}
+
+.subMenuItemDesk:hover {
+  color: #E7040F;
+}
+
+.vl {
+  border-left: 1px solid #000;
+  height: 100%;
+  position: absolute;
+  left: 15%;
+  top: 0;
+}
+
+.menuArrow {
+  position: fixed;
+  left: 16rem;
+}
+
+.menuArrow:hover{
+  color:#E7040F;
+}
+
+.childMenuContainer {
+  flex:1;
+  position: absolute;
+  left: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ .childMenuWrapperDesk {
+  margin-left: 2rem;
+  background-color: #F4F4F4;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease-in-out;
+  column-count: 3;
+  column-fill: auto; 
+  padding-left: 30px;
+} 
+
+.submenuWrapperDesk:hover .list {
+  display: block;
+}
+
+.childMenu { 
+  color: #000;
+  margin-right: 20px; 
+  margin-bottom: 10px;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  column-count: 3; 
+  column-gap: 20px; 
+  column-fill: balance;
+  padding-bottom: 1rem;
+}

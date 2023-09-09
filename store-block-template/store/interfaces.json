@@ -10,5 +10,14 @@
   },
   "custom-footer-mobile": {
     "component": "FooterMobile"
+  },
+  "custom-mega-menu-desktop": {
+    "component": "MegamenuDesktop"
+  },
+  "custom-mega-menu-mobile": {
+    "component": "MegamenuMobile"
+  },
+  "custom-footer" : {
+    "component": "TestSchema"
   }
 }

@@ -41,14 +41,16 @@ input.inputBoxd::placeholder{
     top: 2rem;
     left: 4rem;
 }
-  
 .listItemd {
     float: left;
 }
-  
 .listItemd a {
     display: block;
     color: #000;
     text-align: center;
     text-decoration: none;
+}
+.iconItemd img {
+    height: 1rem;
+    width: 1rem;
 }

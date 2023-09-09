@@ -1,50 +1,67 @@
 .addIcon {
     margin-left: 17rem;
 }
+
+.menuHeader {
+    display: flex;
+    align-items: center;
+}
+
 .menuItem {
     text-decoration: none;
     color:#000;
 }
+
 input.inputBox::placeholder{
     color: black;
 }
+
 .inputBox {
     border: 1px solid;
     border-radius: 14px;
 }
+
 .arrow {
     position: relative;
     right:2rem;
     top:0.25rem;
 }
+
 .iconItem {
     color: #000;
 }
+
 .socialIcons {
     position: relative;
     top: 3rem;
     right: 20rem;
 }
+
 .listWrapper {
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-  }
+}
   
-  .listItem {
+.listItem {
     float: left;
-  }
+}
   
-  .listItem a {
+.listItem a {
     display: block;
     color: #000;
     text-align: center;
     text-decoration: none;
-  }
+}
 
-  .listWrap{
+.listWrap{
     list-style-type: none;
     margin-left: -2rem;
-  }
+}
+
+.iconItem img {
+    height: 1rem;
+    width: 1rem;
+}
