@@ -1,0 +1,15 @@
+.tableContainer {
+    background-color: #001B44;
+    color: white;
+}
+
+.loader {
+    animation: spin 3s linear infinite;
+    color: light-purple;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+  

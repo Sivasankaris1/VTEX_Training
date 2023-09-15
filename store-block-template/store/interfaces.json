@@ -19,5 +19,8 @@
   },
   "custom-footer" : {
     "component": "TestSchema"
+  },
+  "custom-contact-data": {
+    "component": "CustomContactData"
   }
 }
