@@ -2,6 +2,7 @@
   "extends": "@vtex/tsconfig",
   "compilerOptions": {
     "jsx": "react",
+    "lib": ["DOM", "ES6"],
     "allowSyntheticDefaultImports": true,
     "noEmitOnError": false,
     "typeRoots": [
@@ -9,7 +10,7 @@
     ],
     "module": "esnext",
     "moduleResolution": "node",
-    "target": "es2017",
+    "target": "ES6",
     "skipLibCheck": true
   },
   "include": [

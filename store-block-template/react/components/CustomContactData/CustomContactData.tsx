@@ -63,7 +63,7 @@ const CustomContactData : StorefrontFunctionComponent<contactProps> = (props) =>
                 </div>
              ) : ( 
                 <>
-                {filteredData && filteredData.length > 0 ? (
+                {filteredData.length > 0 ? (
                     <>
                         <div className="pa2">
                             <div className={`flex justify-between pv6 ph3 b--grey`}>

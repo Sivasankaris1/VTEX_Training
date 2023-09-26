@@ -22,5 +22,8 @@
   },
   "custom-contact-data": {
     "component": "CustomContactData"
+  },
+  "custom-contact-save": {
+    "component": "CustomContactSave"
   }
 }

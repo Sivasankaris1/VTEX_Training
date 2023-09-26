@@ -1,0 +1,7 @@
+{
+    "store.custom#contact-us": {
+        "children": [
+            "custom-contact-save"
+        ]
+    }
+}
