@@ -66,7 +66,10 @@ const CustomContactData : StorefrontFunctionComponent<contactProps> = (props) =>
                 {filteredData.length > 0 ? (
                     <>
                         <div className="pa2">
-                            <div className={`flex justify-between pv6 ph3 b--grey`}>
+                            <div className={`flex flex-column justify-between pv6 ph3 b--grey`}>
+                                <div className="tc">
+                                    <h5 className="f6 f2-m f-subheadline-l fw6">Customer Data Using GraphQL</h5>
+                                </div>
                                 <table className={`f6 w-100 collapse row wrap ${styles.tableContainer}`} cellSpacing="0">
                                     <thead>
                                         <tr className="br">

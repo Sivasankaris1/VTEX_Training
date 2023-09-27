@@ -29,7 +29,7 @@ const MegamenuDesktop: StorefrontFunctionComponent<megaMenuProps> = (props) => {
         return (
           <>
             {submenus.map((submenu: any, index: number) => (
-                <>
+                <React.Fragment key={index}>
                     <div className={`ml3  pa3 ${styles.submenuWrapperDesk}`} key={index}>
                         <div className={` ${styles.subMenuItemDesk}`}
                             onMouseEnter = {() => handleMouseEnter(submenu.label)}
@@ -47,7 +47,7 @@ const MegamenuDesktop: StorefrontFunctionComponent<megaMenuProps> = (props) => {
                             {showChildMenu(submenu.submenus)}
                         </div>
                     )}
-                </>
+                </React.Fragment>
             ))}
           </>
         );
@@ -59,7 +59,7 @@ const MegamenuDesktop: StorefrontFunctionComponent<megaMenuProps> = (props) => {
             <div className={`${styles.childMenuWrapperDesk}`}>
                 {submenus?.map((childmenu: any, index: number) => {
                     return (
-                        <>
+                        <React.Fragment key={index}>
                             <ul className={`pa4 ${styles.list}`}
                                 key={index}
                                 onMouseEnter={() => handleMouseEnter(childmenu.label)}
@@ -72,7 +72,7 @@ const MegamenuDesktop: StorefrontFunctionComponent<megaMenuProps> = (props) => {
                                 {showChildMenu(childmenu.submenus)}
                             </div>
                         )}
-                        </>
+                        </React.Fragment>
                     )
                 })}
             </div>
@@ -85,7 +85,7 @@ const MegamenuDesktop: StorefrontFunctionComponent<megaMenuProps> = (props) => {
                     <div className={`pl5 ml5 tj ${styles.topMenuListWrapperDesk} `}>
                         {props.menuItem?.map((menu: any, index: number) => {
                             return (
-                                <div className={`pa4 ${styles.menuItemWrapperDesk}`} 
+                                <div key={index} className={`pa4 ${styles.menuItemWrapperDesk}`} 
                                     onMouseEnter = {() => handleMouseEnter(menu.label)} 
                                     onMouseLeave={() => handleMouseLeave(menu.label)}
                                 >

@@ -25,7 +25,7 @@ type menuLayout = {
 }
 
 const FooterMobile: StorefrontFunctionComponent<footerProps> = (props) => {
-    const [isMenuOpen, setIsMenuOpen] = useState(Array(props.menuLayout.length).fill(false));
+    const [isMenuOpen, setIsMenuOpen] = useState(Array(props.menuLayout?.length).fill(false));
     
     const toggleMenu = (index: number) => {
         const updatedMenuState = [...isMenuOpen];
@@ -39,7 +39,7 @@ const FooterMobile: StorefrontFunctionComponent<footerProps> = (props) => {
             <div className="bg-light-gray">
             {props.menuLayout?.map((menuLayoutItem, index) => {
                     return (
-                        <div className="pt4 flex flex-wrap justify-between">
+                        <div key={index} className="pt4 flex flex-wrap justify-between">
                             <div className="flex flex-column">
                                 <div className={styles.menuHeader} onClick={() => toggleMenu(index)}>
                                     <a className="pt2 b ml4">{menuLayoutItem.menuTitle}</a>

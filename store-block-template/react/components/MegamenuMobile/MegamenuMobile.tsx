@@ -44,13 +44,13 @@ const MegamenuMobile: StorefrontFunctionComponent<megaMenuProps> = (props) => {
                 <ul className={`${styles.subMenuWrapper} list pl0 mt2`}>
                     {subMenuItems?.map((item:any,index:number) => {
                         return (
-                            <>
+                            <React.Fragment key={index}>
                             <li className={`mb3 ttu bb fw7 ${styles.submenuList} `} 
                                 key={index}
                                 onClick={() => toggleSubMenu(`${parentMenu}-${item?.label}`)}
                             >
                                 <p className={`subItem ${
-                                        slicedMenuOpen?.includes(item?.label) ? 'red' : ''}`}>{item.label}
+                                        slicedMenuOpen?.includes(item?.label) ? 'red' : ''}`}>{item?.label}
                                     {item?.submenus && (
                                         <span className={`${styles.menuAngleArrow}`}>
                                             {slicedMenuOpen.includes(item?.label) ? (
@@ -76,7 +76,7 @@ const MegamenuMobile: StorefrontFunctionComponent<megaMenuProps> = (props) => {
                                         </ul>
                                     )}
                             </li>
-                            </>
+                            </React.Fragment>
                         )
                     })}
                 </ul>
@@ -90,7 +90,7 @@ const MegamenuMobile: StorefrontFunctionComponent<megaMenuProps> = (props) => {
                 <div className="flex flex-column flex-wrap">
                     {props.menuItem?.map((menu: any, index: number) => {
                         return (
-                            <>
+                            <React.Fragment key={index}>
                                 {menuOpen?.includes(menu?.label) ? 
                                      (<a href="/" className="prevLink">
                                         <span className={`fw6 `}>
@@ -104,7 +104,7 @@ const MegamenuMobile: StorefrontFunctionComponent<megaMenuProps> = (props) => {
                                     menuOpen?.includes(menu?.label) ? 'red' : ''}`} 
                                     key={index} 
                                     onClick={() => handleMenuClick(menu)} >
-                                    {menu.label}
+                                    {menu?.label}
                                     {menu?.submenus && (
                                         <span className={`${styles.menuAngleArrow}`}>
                                             {menuOpen.includes(menu?.label) ? (
@@ -118,7 +118,7 @@ const MegamenuMobile: StorefrontFunctionComponent<megaMenuProps> = (props) => {
                                 {menuOpen?.includes(menu?.label) &&
                                     menu?.submenus &&
                                     renderSubMenu(menu?.submenus, menu?.label)}
-                            </>
+                            </React.Fragment>
                         )
                     })}
                 </div>

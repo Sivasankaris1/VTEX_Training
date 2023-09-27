@@ -79,7 +79,7 @@ const FooterDesktop: StorefrontFunctionComponent<footerProps> = (props) => {
                         <div className={`pt3 ml4 ${styles.socialIconsd}`}>
                             {props.socialImage?.map((simage: image, index: number) => {
                                 return (
-                                    <span>
+                                    <span key={index}>
                                         <a className={`${styles.iconItemd}`} href={simage.href} key={index}>
                                             <img src={`${simage.carouselImage}`} alt="links" />
                                         </a>
