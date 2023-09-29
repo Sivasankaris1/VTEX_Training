@@ -24,7 +24,7 @@ const CustomContactService: StorefrontFunctionComponent = () => {
 
     return (
         <div className="pa2">
-          {loading ? (
+          {loading && !err ? (
                     <div className="spinner-border text-primary" role="status">
                         <span className="sr-only">Loading...</span>
                     </div>
@@ -37,33 +37,41 @@ const CustomContactService: StorefrontFunctionComponent = () => {
                   </p>
                 ) : ( 
                   <>
+                  
                     <div className="tc">
                       <h4 className="f6 f2-m f-subheadline-l fw6">Contact Data Using API</h4>
                     </div>
-                    <table className={`f6 w-100 collapse row wrap`} cellSpacing="0">
-                        <thead>
-                            <tr className={`br`}>
-                                <th className="fw6 tc ba b--black-60 pt2 pb3 pr3">ID</th>
-                                <th className="fw6 tc ba b--black-60 pt2 pb3 pr3">Name</th>
-                                <th className="fw6 tc ba b--black-60 pt2 pb3 pr3">Email</th>
-                                <th className="fw6 tc ba b--black-60 pt2 pb3 pr3">Subject</th>
-                                <th className="fw6 tc ba b--black-60 pt2 pb3 pr3">Message</th>
-                                <th className="fw6 tc ba b--black-60 pt2 pb3 pr3">Uploaded File</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {contactData.map((data: any, dataIndex: number) => (
-                                <tr key={dataIndex} className={`${styles.striped}`}>
-                                    <td className="mr4 pl3 pv3 pr3 ba b--black-60">{data?.id}</td>
-                                    <td className="mr4 pl3 pv3 pr3 ba b--black-60">{data?.name}</td>
-                                    <td className="mr4 pl3 pv3 pr3 ba b--black-60">{data?.email}</td>
-                                    <td className="mr4 pl3 pv3 pr3 ba b--black-60">{data?.subject}</td>
-                                    <td className="mr4 pl3 pv3 pr3 ba b--black-60">{data?.message}</td>
-                                    <td className="mr4 pl3 pv3 pr3 ba b--black-60">{data?.file}</td>
+                    {contactData?.length > 0 ? (
+                        <table className={`f6 w-100 collapse row wrap`} cellSpacing="0">
+                            <thead>
+                                <tr className={`br`}>
+                                    <th className="fw6 tc ba b--black-60 pt2 pb3 pr3">ID</th>
+                                    <th className="fw6 tc ba b--black-60 pt2 pb3 pr3">Name</th>
+                                    <th className="fw6 tc ba b--black-60 pt2 pb3 pr3">Email</th>
+                                    <th className="fw6 tc ba b--black-60 pt2 pb3 pr3">Subject</th>
+                                    <th className="fw6 tc ba b--black-60 pt2 pb3 pr3">Message</th>
+                                    <th className="fw6 tc ba b--black-60 pt2 pb3 pr3">Uploaded File</th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                {contactData.map((data: any, dataIndex: number) => (
+                                    <tr key={dataIndex} className={`${styles.striped}`}>
+                                        <td className="mr4 pl3 pv3 pr3 ba b--black-60">{data?.id}</td>
+                                        <td className="mr4 pl3 pv3 pr3 ba b--black-60">{data?.name}</td>
+                                        <td className="mr4 pl3 pv3 pr3 ba b--black-60">{data?.email}</td>
+                                        <td className="mr4 pl3 pv3 pr3 ba b--black-60">{data?.subject}</td>
+                                        <td className="mr4 pl3 pv3 pr3 ba b--black-60">{data?.message}</td>
+                                        <td className="mr4 pl3 pv3 pr3 ba b--black-60">{data?.file}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    ) : (
+                        <p className="w-90 ba tc br2 pa3 ma2 red bg-washed-red" role="alert"> 
+                            No Data Found 
+                        </p>
+                      )
+                    }
                   </>
                 )}
             </div>

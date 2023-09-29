@@ -3,8 +3,7 @@
     "blocks": [
       "rich-text",
       "info-card",
-      "custom-contact-data",
-      "custom-contact-service"
+      "custom-contact-data"
     ]
   },
   "rich-text": { 
