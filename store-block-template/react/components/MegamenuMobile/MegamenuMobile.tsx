@@ -6,6 +6,7 @@ interface megaMenuProps {
     menuItem : menu[]
 }
 type menu = {
+    __editorItemTitle : string,
     label : string,
     href : string,
     submenus?: menu[]
@@ -137,13 +138,9 @@ MegamenuMobile.schema = {
             items : {
                 type: "object",
                 properties : {
-                    label: {
+                    __editorItemTitle: {
+                        title: "Menu Display Name",
                         type: "string",
-                        title: "Enter label for top menu"
-                    },
-                    href: {
-                        type:"string",
-                        title: "Enter href value for top menu"
                     },
                     submenus: {
                         type: "array",
@@ -151,7 +148,7 @@ MegamenuMobile.schema = {
                         items: {
                             type: "object",
                             properties: {
-                                label: {
+                                __editorItemTitle: {
                                     title: "Enter label for Sub menu",
                                     type: "string"
                                 },

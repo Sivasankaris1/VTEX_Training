@@ -1,0 +1,7 @@
+{
+    "store.custom#faq": {
+      "children": [
+        "custom-contact-service"
+      ]
+    }
+}

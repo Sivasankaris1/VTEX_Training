@@ -70,7 +70,6 @@ const CustomSave : StorefrontFunctionComponent = () => {
     }
 
     const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-        console.log("formdata" + JSON.stringify(contactFormData));
         event.preventDefault()
         if (!recaptchaToken) {
             setError(true)
@@ -103,7 +102,7 @@ const CustomSave : StorefrontFunctionComponent = () => {
         }
     }
     return (
-        <article className={`mw5 mw7-ns pa4 ba b--black center black-80`}>
+        <article className={`mw7-ns pa4 ba b--black center black-80`}>
             <h2 className="b lh-copy tc">Contact Info</h2>
             <form onSubmit={handleFormSubmit} method="post" acceptCharset="utf-8">
                 <fieldset id="sign_up" className="ba b--transparent ph0 mh0">

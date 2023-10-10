@@ -78,6 +78,18 @@
     }
   },
   "drawer": {
-    "children": []
+    "children": [
+      "menu#drawer"
+    ]
+  },
+  "menu#drawer": {
+    "children": [
+      "custom-mega-menu-mobile"
+    ],
+    "props": {
+      "blockClass": "drawer",
+      "orientation": "vertical",
+      "renderingStrategy": "eager"
+    }
   }
 }

@@ -44,10 +44,12 @@ const CustomContactData : StorefrontFunctionComponent<contactProps> = (props) =>
                 setAllContactdata([...data?.documents])
                 setLoading(false);
             }
-            if (error) {
-                console.error("GraphQL Error:", error);
+            if (error) {        
+                setLoading(false);
+                console.error("GraphQL Error" + error);
             }
-        }, [data, loading, error, loadData, getdata])
+        }, 
+        [data, loading, error, loadData, getdata])
         const filteredData:any = []
         if(contactData && contactData.length > 0) {
             const uniqueValues = new Set(contactData)
@@ -57,7 +59,12 @@ const CustomContactData : StorefrontFunctionComponent<contactProps> = (props) =>
         }
         return (
             <>
-             {loading ? ( 
+            {/* {error ? (
+                  <p className="w-90 ba tc br2 pa3 ma2 red bg-washed-red" role="alert">
+                    Failed in loading data. 
+                  </p>
+            ) : ''} */}
+            {loading && !error ? ( 
                 <div className={`tc ${styles.loader}`}>
                     <ImSpinner9 size={20} className="spin"/>
                 </div>
@@ -106,7 +113,7 @@ const CustomContactData : StorefrontFunctionComponent<contactProps> = (props) =>
                     ) 
                     : (
                     <div>
-                        <p className="tc">Unable to fetch data..</p>
+                        <p className="w-90 ba tc br2 pa3 ma2 red bg-washed-red" role="alert"> No Data Found </p>
                     </div>
                     )
                 }
